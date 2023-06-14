@@ -8,59 +8,277 @@
         "env": []
     },
     {
-        "id": "504b3981f3d32443",
-        "type": "mongodb-aleph-out",
-        "z": "5edd6951775080a4",
-        "mongodb": "9c84bc5d37e0c9b4",
-        "name": "Entrada MongoDB",
-        "collection": "myCollection",
-        "payonly": false,
-        "upsert": false,
-        "multi": false,
-        "operation": "insert",
-        "x": 790,
-        "y": 140,
-        "wires": [
-            [
-                "ccb84606a708f1ad"
-            ]
-        ]
+        "id": "407a01e4.6b637",
+        "type": "mqtt-broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "c0ca2f82448551e3",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2edd8ec354b8383c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "serverdatactd.duckdns.org",
+        "port": "1782",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d76b0a81d1b0d336",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "fa95b7a49a366d45",
+        "type": "ui_tab",
+        "name": "Dashboard - Server Data CTD IFSP",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "adaaf9bfa7e64496",
+        "type": "ui_group",
+        "name": "Data Input Luminosity",
+        "tab": "fa95b7a49a366d45",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fd3cf77cfb30f804",
+        "type": "ui_group",
+        "name": "Data Input Humidity",
+        "tab": "fa95b7a49a366d45",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9962081de457e482",
+        "type": "ui_group",
+        "name": "MongoDB msg.payload",
+        "tab": "fa95b7a49a366d45",
+        "order": 5,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d228348364c78df7",
+        "type": "ui_group",
+        "name": "LED Selector Switch",
+        "tab": "fa95b7a49a366d45",
+        "order": 4,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e07276c1bd30c6ff",
+        "type": "ui_group",
+        "name": "Data Input Temperature",
+        "tab": "fa95b7a49a366d45",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9c84bc5d37e0c9b4",
+        "type": "mongodb-aleph-config",
+        "hostname": "localhost",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "26048",
+        "db": "myDB",
+        "name": "Local"
+    },
+    {
+        "id": "512f983d286f3141",
+        "type": "mongodb-aleph-config",
+        "hostname": "cluster0.hui5ieo.mongodb.net",
+        "topology": "dnscluster",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "station",
+        "name": "Atlas"
     },
     {
         "id": "e7b3042bc239a9a8",
         "type": "function",
         "z": "5edd6951775080a4",
         "name": "Filtro de Entrada de Dados",
-        "func": "var status = msg.payload;\nvar usuario = \"root\"\nvar dispositivo = msg.topic;\n\nmsg.payload = {}\nmsg.payload.status = status;\nmsg.payload.usuario = usuario;\nmsg.payload.dispositivo = dispositivo;\n\nreturn msg;",
+        "func": "var status = msg.payload;\nvar user = \"root\"\nvar device = msg.topic;\n\nmsg.payload = {}\nmsg.payload.status = status;\nmsg.payload.user = user;\nmsg.payload.device = device;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
+        "x": 680,
         "y": 140,
         "wires": [
             [
+                "85b3ae4b9c869380",
                 "504b3981f3d32443"
             ]
         ]
-    },
-    {
-        "id": "cd7f15baeb2d5b99",
-        "type": "ui_text",
-        "z": "5edd6951775080a4",
-        "group": "adaaf9bfa7e64496",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Instant Luminosity Sensor Reading",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1340,
-        "y": 280,
-        "wires": []
     },
     {
         "id": "4b4bb7ffc01776c9",
@@ -78,26 +296,9 @@
         "y": 80,
         "wires": [
             [
-                "e7b3042bc239a9a8"
+                "6fd367d67dd548e6"
             ]
         ]
-    },
-    {
-        "id": "70459247534a3992",
-        "type": "ui_text",
-        "z": "5edd6951775080a4",
-        "group": "fd3cf77cfb30f804",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Instant Humidity Sensor Reading",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1340,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "3dd0ef0dd1033bdf",
@@ -115,7 +316,7 @@
         "y": 140,
         "wires": [
             [
-                "e7b3042bc239a9a8"
+                "6fd367d67dd548e6"
             ]
         ]
     },
@@ -135,59 +336,7 @@
         "y": 200,
         "wires": [
             [
-                "e7b3042bc239a9a8"
-            ]
-        ]
-    },
-    {
-        "id": "ccb84606a708f1ad",
-        "type": "ui_text",
-        "z": "5edd6951775080a4",
-        "group": "9962081de457e482",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Input Instant Test Sensor Reading",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1060,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "48664fea9e382292",
-        "type": "ui_switch",
-        "z": "5edd6951775080a4",
-        "name": "",
-        "label": "LED Switch",
-        "tooltip": "",
-        "group": "d228348364c78df7",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "signals/nodectd",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "on",
-        "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "off",
-        "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 610,
-        "y": 600,
-        "wires": [
-            [
-                "b7e10150fa3d57ec",
-                "7b228475184b47b9"
+                "6fd367d67dd548e6"
             ]
         ]
     },
@@ -210,160 +359,6 @@
         "wires": []
     },
     {
-        "id": "7b228475184b47b9",
-        "type": "ui_led",
-        "z": "5edd6951775080a4",
-        "order": 2,
-        "group": "d228348364c78df7",
-        "width": 0,
-        "height": 0,
-        "label": "",
-        "labelPlacement": "left",
-        "labelAlignment": "center",
-        "colorForValue": [
-            {
-                "color": "#ff0000",
-                "value": "off",
-                "valueType": "str"
-            },
-            {
-                "color": "#008000",
-                "value": "on",
-                "valueType": "str"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "LED Indicator",
-        "x": 820,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "81f29ab70de8194b",
-        "type": "ui_text",
-        "z": "5edd6951775080a4",
-        "group": "e07276c1bd30c6ff",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Instant Temperature Sensor Reading",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1350,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "f4c2d7f89813f938",
-        "type": "ui_chart",
-        "z": "5edd6951775080a4",
-        "name": "",
-        "group": "e07276c1bd30c6ff",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Temperature Sensor",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "3",
-        "removeOlderPoints": "300",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1300,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "863415b601e83364",
-        "type": "ui_chart",
-        "z": "5edd6951775080a4",
-        "name": "",
-        "group": "fd3cf77cfb30f804",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Humidity Sensor",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "3",
-        "removeOlderPoints": "300",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1280,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ac222068109bb2b1",
-        "type": "mongodb-aleph-in",
-        "z": "5edd6951775080a4",
-        "mongodb": "9c84bc5d37e0c9b4",
-        "name": "Saída MongoDB",
-        "collection": "myCollection",
-        "operation": "find",
-        "x": 460,
-        "y": 380,
-        "wires": [
-            [
-                "477a2fde5f3d6730",
-                "0dd49d79e8abc672",
-                "feee42957d8f6882"
-            ]
-        ]
-    },
-    {
         "id": "477a2fde5f3d6730",
         "type": "function",
         "z": "5edd6951775080a4",
@@ -379,66 +374,6 @@
         "wires": [
             [
                 "05ffc0943403a90a"
-            ]
-        ]
-    },
-    {
-        "id": "40637980e08c75cd",
-        "type": "mqtt in",
-        "z": "5edd6951775080a4",
-        "name": "",
-        "topic": "sensors/luminosity",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "2edd8ec354b8383c",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 210,
-        "y": 320,
-        "wires": [
-            [
-                "ac222068109bb2b1"
-            ]
-        ]
-    },
-    {
-        "id": "05332657d9fc1ec7",
-        "type": "mqtt in",
-        "z": "5edd6951775080a4",
-        "name": "",
-        "topic": "sensors/temperature",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "2edd8ec354b8383c",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 210,
-        "y": 380,
-        "wires": [
-            [
-                "ac222068109bb2b1"
-            ]
-        ]
-    },
-    {
-        "id": "417188091511eeeb",
-        "type": "mqtt in",
-        "z": "5edd6951775080a4",
-        "name": "",
-        "topic": "sensors/humidity",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "2edd8ec354b8383c",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 220,
-        "y": 440,
-        "wires": [
-            [
-                "ac222068109bb2b1"
             ]
         ]
     },
@@ -474,7 +409,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
+        "x": 760,
         "y": 380,
         "wires": [
             [
@@ -544,14 +479,336 @@
         ]
     },
     {
+        "id": "117a78e64bd644eb",
+        "type": "debug",
+        "z": "5edd6951775080a4",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2d8758b4e0d5526f",
+        "type": "debug",
+        "z": "5edd6951775080a4",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1d3a41b4bb622a81",
+        "type": "debug",
+        "z": "5edd6951775080a4",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "6fd367d67dd548e6",
+        "type": "delay",
+        "z": "5edd6951775080a4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "e7b3042bc239a9a8"
+            ]
+        ]
+    },
+    {
+        "id": "1d1b29519b8c9b92",
+        "type": "delay",
+        "z": "5edd6951775080a4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1170,
+        "y": 140,
+        "wires": [
+            [
+                "ccb84606a708f1ad"
+            ]
+        ]
+    },
+    {
+        "id": "6b8e7d79588cd14b",
+        "type": "inject",
+        "z": "5edd6951775080a4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 380,
+        "wires": [
+            [
+                "ac222068109bb2b1"
+            ]
+        ]
+    },
+    {
+        "id": "48664fea9e382292",
+        "type": "ui_switch",
+        "z": "5edd6951775080a4",
+        "name": "",
+        "label": "LED Switch",
+        "tooltip": "",
+        "group": "d228348364c78df7",
+        "order": 1,
+        "width": 12,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "signals/nodectd",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "b7e10150fa3d57ec",
+                "7b228475184b47b9"
+            ]
+        ]
+    },
+    {
+        "id": "cd7f15baeb2d5b99",
+        "type": "ui_text",
+        "z": "5edd6951775080a4",
+        "group": "adaaf9bfa7e64496",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Instant Luminosity Sensor Reading",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1340,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "70459247534a3992",
+        "type": "ui_text",
+        "z": "5edd6951775080a4",
+        "group": "fd3cf77cfb30f804",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Instant Humidity Sensor Reading",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1340,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ccb84606a708f1ad",
+        "type": "ui_text",
+        "z": "5edd6951775080a4",
+        "group": "9962081de457e482",
+        "order": 1,
+        "width": 12,
+        "height": 2,
+        "name": "",
+        "label": "Input Instant Test Sensor Reading",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1420,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "81f29ab70de8194b",
+        "type": "ui_text",
+        "z": "5edd6951775080a4",
+        "group": "e07276c1bd30c6ff",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Instant Temperature Sensor Reading",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1350,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f4c2d7f89813f938",
+        "type": "ui_chart",
+        "z": "5edd6951775080a4",
+        "name": "",
+        "group": "e07276c1bd30c6ff",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "label": "Temperature Sensor",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "300",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1300,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "863415b601e83364",
+        "type": "ui_chart",
+        "z": "5edd6951775080a4",
+        "name": "",
+        "group": "fd3cf77cfb30f804",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "label": "Humidity Sensor",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "300",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1280,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "7242249fc1fae2bd",
         "type": "ui_chart",
         "z": "5edd6951775080a4",
         "name": "",
         "group": "adaaf9bfa7e64496",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 8,
+        "height": 5,
         "label": "Luminosity Sensor",
         "chartType": "line",
         "legend": "false",
@@ -582,157 +839,94 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1290,
-        "y": 240,
+        "y": 220,
         "wires": [
             []
         ]
     },
     {
-        "id": "117a78e64bd644eb",
-        "type": "debug",
+        "id": "504b3981f3d32443",
+        "type": "mongodb-aleph-out",
         "z": "5edd6951775080a4",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1260,
-        "y": 320,
-        "wires": []
+        "mongodb": "9c84bc5d37e0c9b4",
+        "name": "Entrada MongoDB Local",
+        "collection": "myCollection",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 950,
+        "y": 140,
+        "wires": [
+            [
+                "1d1b29519b8c9b92"
+            ]
+        ]
     },
     {
-        "id": "2d8758b4e0d5526f",
-        "type": "debug",
+        "id": "85b3ae4b9c869380",
+        "type": "mongodb-aleph-out",
         "z": "5edd6951775080a4",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1260,
-        "y": 440,
-        "wires": []
+        "mongodb": "512f983d286f3141",
+        "name": "Entrada MongoDB Mirror",
+        "collection": "weather",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 950,
+        "y": 80,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "1d3a41b4bb622a81",
-        "type": "debug",
+        "id": "ac222068109bb2b1",
+        "type": "mongodb-aleph-in",
         "z": "5edd6951775080a4",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1260,
-        "y": 560,
-        "wires": []
+        "mongodb": "9c84bc5d37e0c9b4",
+        "name": "Saída MongoDB Local",
+        "collection": "myCollection",
+        "operation": "find",
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "477a2fde5f3d6730",
+                "0dd49d79e8abc672",
+                "feee42957d8f6882"
+            ]
+        ]
     },
     {
-        "id": "9c84bc5d37e0c9b4",
-        "type": "mongodb-aleph-config",
-        "hostname": "localhost",
-        "topology": "direct",
-        "connectOptions": "",
-        "port": "27017",
-        "db": "myDB",
-        "name": ""
-    },
-    {
-        "id": "adaaf9bfa7e64496",
-        "type": "ui_group",
-        "name": "Data Input Luminosity",
-        "tab": "fa95b7a49a366d45",
-        "order": 1,
-        "disp": true,
-        "width": 10,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "2edd8ec354b8383c",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "serverdatactd.duckdns.org",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "fd3cf77cfb30f804",
-        "type": "ui_group",
-        "name": "Data Input Humidity",
-        "tab": "fa95b7a49a366d45",
-        "order": 3,
-        "disp": true,
-        "width": 10,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "9962081de457e482",
-        "type": "ui_group",
-        "name": "MongoDB msg.payload",
-        "tab": "fa95b7a49a366d45",
-        "order": 5,
-        "disp": true,
-        "width": 10,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d228348364c78df7",
-        "type": "ui_group",
-        "name": "LED Selector Switch",
-        "tab": "fa95b7a49a366d45",
-        "order": 4,
-        "disp": true,
-        "width": 10,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "e07276c1bd30c6ff",
-        "type": "ui_group",
-        "name": "Data Input Temperature",
-        "tab": "fa95b7a49a366d45",
+        "id": "7b228475184b47b9",
+        "type": "ui_led",
+        "z": "5edd6951775080a4",
         "order": 2,
-        "disp": true,
-        "width": 10,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "fa95b7a49a366d45",
-        "type": "ui_tab",
-        "name": "Dashboard - Server Data CTD IFSP",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "group": "d228348364c78df7",
+        "width": 12,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "off",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "on",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED Indicator",
+        "x": 820,
+        "y": 680,
+        "wires": []
     }
 ]

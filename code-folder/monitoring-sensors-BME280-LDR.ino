@@ -10,9 +10,13 @@
 const int ledPin = 4;
 const int ledInt = 15;
 
-const char* ssid = "abc";
-const char* password = "abc123";
-const char* mqtt_server = "abc.duckdns.org";
+const char* ssid = "Enter your SSID";
+const char* password = "Enter your PASSWORD";
+
+const char* mqttServer = "Enter your IP";
+const int mqttPort = "Enter your PORT";
+const char* mqttUser = "Enter your USER";
+const char* mqttPassword = "Enter your PASSWORD";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -33,7 +37,7 @@ void setup() {
       ;
   }
   setup_wifi();
-  client.setServer(mqtt_server, 1883);
+  client.setServer(mqttServer, mqttPort);
   client.setCallback(callback);
   pinMode(ledPin, OUTPUT);
   pinMode(ledInt, OUTPUT);
@@ -80,7 +84,7 @@ void callback(char* topic, byte* message, unsigned int length) {
 void reconnect() {
   while (!client.connected()) {
     Serial.print("Trying to connect to MQTT...");
-    if (client.connect("ESP32Client")) {
+    if (client.connect("ESP32Client", mqttUser, mqttPassword)) {
       Serial.println(" Connected.");
       client.subscribe("signals/nodectd");
     } else {
