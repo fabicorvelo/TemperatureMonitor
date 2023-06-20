@@ -8,259 +8,6 @@
         "env": []
     },
     {
-        "id": "407a01e4.6b637",
-        "type": "mqtt-broker",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "c0ca2f82448551e3",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "broker.hivemq.com",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "2edd8ec354b8383c",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "serverdatactd.duckdns.org",
-        "port": "1782",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "d76b0a81d1b0d336",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-dark",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#097479",
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#0eb8c0",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "fa95b7a49a366d45",
-        "type": "ui_tab",
-        "name": "Dashboard - Server Data CTD IFSP",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "adaaf9bfa7e64496",
-        "type": "ui_group",
-        "name": "Data Input Luminosity",
-        "tab": "fa95b7a49a366d45",
-        "order": 1,
-        "disp": true,
-        "width": 8,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "fd3cf77cfb30f804",
-        "type": "ui_group",
-        "name": "Data Input Humidity",
-        "tab": "fa95b7a49a366d45",
-        "order": 3,
-        "disp": true,
-        "width": 8,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "9962081de457e482",
-        "type": "ui_group",
-        "name": "MongoDB msg.payload",
-        "tab": "fa95b7a49a366d45",
-        "order": 5,
-        "disp": true,
-        "width": 12,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d228348364c78df7",
-        "type": "ui_group",
-        "name": "LED Selector Switch",
-        "tab": "fa95b7a49a366d45",
-        "order": 4,
-        "disp": true,
-        "width": 12,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "e07276c1bd30c6ff",
-        "type": "ui_group",
-        "name": "Data Input Temperature",
-        "tab": "fa95b7a49a366d45",
-        "order": 2,
-        "disp": true,
-        "width": 8,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "9c84bc5d37e0c9b4",
-        "type": "mongodb-aleph-config",
-        "hostname": "localhost",
-        "topology": "direct",
-        "connectOptions": "",
-        "port": "26048",
-        "db": "myDB",
-        "name": "Local"
-    },
-    {
-        "id": "512f983d286f3141",
-        "type": "mongodb-aleph-config",
-        "hostname": "cluster0.hui5ieo.mongodb.net",
-        "topology": "dnscluster",
-        "connectOptions": "",
-        "port": "27017",
-        "db": "station",
-        "name": "Atlas"
-    },
-    {
         "id": "e7b3042bc239a9a8",
         "type": "function",
         "z": "5edd6951775080a4",
@@ -271,12 +18,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 140,
+        "x": 560,
+        "y": 100,
         "wires": [
             [
                 "85b3ae4b9c869380",
-                "504b3981f3d32443"
+                "504b3981f3d32443",
+                "1d1b29519b8c9b92"
             ]
         ]
     },
@@ -292,8 +40,8 @@
         "nl": false,
         "rap": false,
         "inputs": 0,
-        "x": 230,
-        "y": 80,
+        "x": 110,
+        "y": 40,
         "wires": [
             [
                 "6fd367d67dd548e6"
@@ -312,8 +60,8 @@
         "nl": false,
         "rap": false,
         "inputs": 0,
-        "x": 230,
-        "y": 140,
+        "x": 110,
+        "y": 100,
         "wires": [
             [
                 "6fd367d67dd548e6"
@@ -332,8 +80,8 @@
         "nl": false,
         "rap": false,
         "inputs": 0,
-        "x": 240,
-        "y": 200,
+        "x": 120,
+        "y": 160,
         "wires": [
             [
                 "6fd367d67dd548e6"
@@ -354,8 +102,8 @@
         "correl": "",
         "expiry": "",
         "broker": "2edd8ec354b8383c",
-        "x": 820,
-        "y": 600,
+        "x": 700,
+        "y": 560,
         "wires": []
     },
     {
@@ -369,8 +117,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 260,
+        "x": 670,
+        "y": 220,
         "wires": [
             [
                 "05ffc0943403a90a"
@@ -388,13 +136,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 260,
+        "x": 930,
+        "y": 220,
         "wires": [
             [
                 "cd7f15baeb2d5b99",
-                "7242249fc1fae2bd",
-                "117a78e64bd644eb"
+                "117a78e64bd644eb",
+                "7242249fc1fae2bd"
             ]
         ]
     },
@@ -409,8 +157,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 380,
+        "x": 680,
+        "y": 340,
         "wires": [
             [
                 "d8988af29d47debf"
@@ -428,8 +176,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 500,
+        "x": 680,
+        "y": 460,
         "wires": [
             [
                 "f7ea1eede4147b9d"
@@ -447,13 +195,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 380,
+        "x": 930,
+        "y": 340,
         "wires": [
             [
-                "f4c2d7f89813f938",
+                "2d8758b4e0d5526f",
                 "81f29ab70de8194b",
-                "2d8758b4e0d5526f"
+                "f4c2d7f89813f938"
             ]
         ]
     },
@@ -468,13 +216,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 500,
+        "x": 930,
+        "y": 460,
         "wires": [
             [
-                "863415b601e83364",
+                "1d3a41b4bb622a81",
                 "70459247534a3992",
-                "1d3a41b4bb622a81"
+                "863415b601e83364"
             ]
         ]
     },
@@ -490,8 +238,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 300,
+        "x": 1140,
+        "y": 260,
         "wires": []
     },
     {
@@ -506,8 +254,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 420,
+        "x": 1140,
+        "y": 380,
         "wires": []
     },
     {
@@ -522,8 +270,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 540,
+        "x": 1140,
+        "y": 500,
         "wires": []
     },
     {
@@ -531,8 +279,8 @@
         "type": "delay",
         "z": "5edd6951775080a4",
         "name": "",
-        "pauseType": "rate",
-        "timeout": "3",
+        "pauseType": "delay",
+        "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -543,36 +291,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 450,
-        "y": 140,
+        "x": 320,
+        "y": 100,
         "wires": [
             [
                 "e7b3042bc239a9a8"
-            ]
-        ]
-    },
-    {
-        "id": "1d1b29519b8c9b92",
-        "type": "delay",
-        "z": "5edd6951775080a4",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "3",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1170,
-        "y": 140,
-        "wires": [
-            [
-                "ccb84606a708f1ad"
             ]
         ]
     },
@@ -590,18 +313,18 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3",
+        "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
-        "y": 380,
+        "x": 130,
+        "y": 340,
         "wires": [
             [
-                "ac222068109bb2b1"
+                "b3fe5738ddb9698b"
             ]
         ]
     },
@@ -631,8 +354,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 610,
-        "y": 600,
+        "x": 490,
+        "y": 560,
         "wires": [
             [
                 "b7e10150fa3d57ec",
@@ -653,8 +376,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1340,
-        "y": 260,
+        "x": 1220,
+        "y": 220,
         "wires": []
     },
     {
@@ -670,8 +393,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1340,
-        "y": 500,
+        "x": 1220,
+        "y": 460,
         "wires": []
     },
     {
@@ -691,8 +414,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1420,
-        "y": 140,
+        "x": 1300,
+        "y": 100,
         "wires": []
     },
     {
@@ -708,8 +431,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1350,
-        "y": 380,
+        "x": 1230,
+        "y": 340,
         "wires": []
     },
     {
@@ -750,8 +473,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1300,
-        "y": 340,
+        "x": 1180,
+        "y": 300,
         "wires": [
             []
         ]
@@ -794,8 +517,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1280,
-        "y": 460,
+        "x": 1160,
+        "y": 420,
         "wires": [
             []
         ]
@@ -838,8 +561,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1290,
-        "y": 220,
+        "x": 1170,
+        "y": 180,
         "wires": [
             []
         ]
@@ -855,12 +578,10 @@
         "upsert": false,
         "multi": false,
         "operation": "insert",
-        "x": 950,
-        "y": 140,
+        "x": 830,
+        "y": 100,
         "wires": [
-            [
-                "1d1b29519b8c9b92"
-            ]
+            []
         ]
     },
     {
@@ -874,27 +595,11 @@
         "upsert": false,
         "multi": false,
         "operation": "insert",
-        "x": 950,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ac222068109bb2b1",
-        "type": "mongodb-aleph-in",
-        "z": "5edd6951775080a4",
-        "mongodb": "9c84bc5d37e0c9b4",
-        "name": "Saída MongoDB Local",
-        "collection": "myCollection",
-        "operation": "find",
-        "x": 460,
-        "y": 380,
+        "x": 830,
+        "y": 40,
         "wires": [
             [
-                "477a2fde5f3d6730",
-                "0dd49d79e8abc672",
-                "feee42957d8f6882"
+                "1d1b29519b8c9b92"
             ]
         ]
     },
@@ -925,8 +630,216 @@
         "shape": "circle",
         "showGlow": true,
         "name": "LED Indicator",
-        "x": 820,
-        "y": 680,
+        "x": 700,
+        "y": 640,
         "wires": []
+    },
+    {
+        "id": "b3fe5738ddb9698b",
+        "type": "mongodb-aleph-in",
+        "z": "5edd6951775080a4",
+        "mongodb": "9c84bc5d37e0c9b4",
+        "name": "Saída MongoDB Local",
+        "collection": "myCollection",
+        "operation": "find",
+        "x": 340,
+        "y": 340,
+        "wires": [
+            [
+                "0dd49d79e8abc672",
+                "477a2fde5f3d6730",
+                "feee42957d8f6882"
+            ]
+        ]
+    },
+    {
+        "id": "1d1b29519b8c9b92",
+        "type": "delay",
+        "z": "5edd6951775080a4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1050,
+        "y": 100,
+        "wires": [
+            [
+                "ccb84606a708f1ad"
+            ]
+        ]
+    },
+    {
+        "id": "2735f5b1f28a9123",
+        "type": "delay",
+        "z": "5edd6951775080a4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d76996621e7d2f8",
+        "type": "ui_template",
+        "z": "5edd6951775080a4",
+        "group": "b9bd5f021d4fa168",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <title>Browser</title>\n</head>\n<div id=\"main\" class=\"container\">\n    <div class=\"row\">\n        <div class=\"cold-lg-12 col-md-12 mx-auto\" style=\"max-height:570px;overflow-y: auto;\">\n            <h3 class=\"block-title\"><center>Seasons of the Year 2023 Brazil</center></h3>\n            <table style=\"font-size:15px;margin-left:20%\" border=\"1\" cellpadding=\"3\" cellspacing=\"3\">\n                <tbody>\n                    <tr>\n                        <td>\n                            <img src=\"https://portal.inmet.gov.br/uploads/seasons/outono.jpg\" width=\"191px\" height=\"182px\">\n                        </td>\n                        <td>\n                            <img src=\"https://portal.inmet.gov.br/uploads/seasons/inverno.jpg\">\n                        </td>\n                        <td>\n                            <img src=\"https://portal.inmet.gov.br/uploads/seasons/primavera.jpg\">\n                        </td>\n                        <td>\n                            <img src=\"https://portal.inmet.gov.br/uploads/seasons/verao.jpg\">\n                        </td>\n                    </tr>\n                    <tr style=\"text-align:center\">\n                        <td>\n                            <b>Autumn</b>\n                        </td>\n                        <td>\n                            <b>Winter</b>\n                        </td>\n                        <td>\n                            <b>Spring</b>\n                        </td>\n                        <td>\n                            <b>Summer</b>\n                        </td>\n                    </tr>\n                    <tr style=\"text-align:center\" id=\"seasonsDate\">\n                        <td>Mar 20, 2023 - 6:25 pm</td>\n                        <td>Jun 21, 2023 - 11:58 am</td>\n                        <td>Sep 23, 2023 - 03:50h am</td>\n                        <td>Dec 22, 2023 - 00:27h am</td>\n                    </tr>\n                    <tr style=\"text-align:center\">\n                        <td colspan=\"4\">\n                            <a href=\"https://www.iag.usp.br/astronomia/datas-de-inicio-das-estacoes-do-ano-2021-2030\"\n                                style=\"color:#fff;\">Source: Department of Astronomy at the Institute of Astronomy, Geophysics and Atmospheric Sciences - IAG/USP\n                                Brazil</a>\n                        </td>\n                    </tr>\n                    <tr style=\"text-align:center\">\n                        <td colspan=\"4\">\n                            <font color=\"red\">In case of daylight savings time, add 1 hour. Accuracy: 1 minute.\n                            </font>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n            </br>\n        </div>\n    </div>\n</div>\n<script src=\"script.js\"></script>\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 720,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2edd8ec354b8383c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "serverdatactd.duckdns.org",
+        "port": "1782",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d228348364c78df7",
+        "type": "ui_group",
+        "name": "LED Selector Switch",
+        "tab": "fa95b7a49a366d45",
+        "order": 4,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "adaaf9bfa7e64496",
+        "type": "ui_group",
+        "name": "Data Input Luminosity",
+        "tab": "fa95b7a49a366d45",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fd3cf77cfb30f804",
+        "type": "ui_group",
+        "name": "Data Input Humidity",
+        "tab": "fa95b7a49a366d45",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9962081de457e482",
+        "type": "ui_group",
+        "name": "MongoDB msg.payload",
+        "tab": "fa95b7a49a366d45",
+        "order": 5,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e07276c1bd30c6ff",
+        "type": "ui_group",
+        "name": "Data Input Temperature",
+        "tab": "fa95b7a49a366d45",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9c84bc5d37e0c9b4",
+        "type": "mongodb-aleph-config",
+        "hostname": "localhost",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "26048",
+        "db": "myDB",
+        "name": "Local"
+    },
+    {
+        "id": "512f983d286f3141",
+        "type": "mongodb-aleph-config",
+        "hostname": "cluster0.hui5ieo.mongodb.net",
+        "topology": "dnscluster",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "station",
+        "name": "Atlas"
+    },
+    {
+        "id": "b9bd5f021d4fa168",
+        "type": "ui_group",
+        "name": "Season of the Year for INMET",
+        "tab": "fa95b7a49a366d45",
+        "order": 6,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fa95b7a49a366d45",
+        "type": "ui_tab",
+        "name": "Dashboard - Server Data CTD IFSP",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     }
 ]
